@@ -1,27 +1,27 @@
 {
   "log": {
-   "loglevel": "info",
-   "access": "/var/log/v2ray/access.log", 
-   "error": "/var/log/v2ray/error.log"
+    "loglevel": "info",
+    "access": "/var/log/v2ray/access.log",
+    "error": "/var/log/v2ray/error.log"
   },
   "inbound": {
-    "port": 8089,                //此处填非443端口
-    "listen":"0.0.0.0",
-    "protocol":"vmess",
+    "port": 8089,
+    "listen": "0.0.0.0",
+    "protocol": "vmess",
     "settings": {
       "clients": [
         {
-          "id": "6fdd86cf-af9b-4b7f-b471-ffcf47ab44d5",   //填写自己的uuid
-          "level": 1,          
+          "id": "your-uuid",
+          "level": 1,
           "alterId": 64
         }
       ]
     },
-   "streamSettings": {
+    "streamSettings": {
       "network": "ws",
       "security": "auto",
       "wsSettings": {
-      "path": "/ray"
+        "path": "/your_path"
       }
     }
   },
@@ -42,7 +42,7 @@
       "rules": [
         {
           "type": "field",
-          "ip": [            
+          "ip": [
             "0.0.0.0/8",
             "10.0.0.0/8",
             "100.64.0.0/10",
@@ -65,10 +65,3 @@
     }
   }
 }
-
-
-
-
- 
-
-          
